@@ -1,4 +1,4 @@
- Smart Plant Care Monitor
+# Smart Plant Care Monitor
 
 An Arduino Uno project that monitors a simulated soil-moisture level and turns on an LED alert when the soil is too dry. The project is built with PlatformIO and simulated in Wokwi.
 
