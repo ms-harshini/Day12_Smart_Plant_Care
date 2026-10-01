@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "Day 12 Smart Plant Care",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-led", "id": "alertLed", "top": 180, "left": 300, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "ledResistor", "top": 230, "left": 300, "attrs": { "value": "220" } },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "soil", "top": 40, "left": 300, "attrs": { "value": "512" } }
+  ],
+  "connections": [
+    [ "uno:7", "ledResistor:1", "green", [] ],
+    [ "ledResistor:2", "alertLed:A", "green", [] ],
+    [ "alertLed:C", "uno:GND.2", "black", [] ],
+    [ "soil:VCC", "uno:5V", "red", [] ],
+    [ "soil:GND", "uno:GND.1", "black", [] ],
+    [ "soil:SIG", "uno:A0", "green", [] ]
+  ],
+  "serialMonitor": { "display": "terminal" }
+}
